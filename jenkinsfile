@@ -12,9 +12,4 @@ node ()
     {
       sh "echo Hello world again"
       }
-     stage ('job4')
-     {
-      sh "echo Hello again"
-      }
-  }
-      
+       
