@@ -16,7 +16,7 @@ node(){
             ls -latr
             pwd
             whoami
-            sudo -t service jenkins status
+            
         '''
     }
     stage('Sleeping'){
