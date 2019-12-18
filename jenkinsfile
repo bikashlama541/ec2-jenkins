@@ -1,20 +1,25 @@
-node ()
-{
-  stage ( 'job1')
-  {
-    sh "touch abc.txt"
-   }
-   stage ('job2')
-   {
-     sh "echo Hello world"
+node(){
+    stage('Greetings'){
+        echo "Hey there!"
     }
-    stage ('job3')
-    {
-      sh "echo Hello world again"
-      }
-       stage ('job4')
-    {
-      sh "echo Hello world again"
-      }
-      }
-       
+    stage('Know Each Other'){
+        echo "My Name is so and so"
+        echo "I do Jenkins"
+    }
+    stage('Executing shell commands'){
+        sh "ls -latr"
+        sh "pwd"
+        sh "whoami"
+    }
+    stage('Ending'){
+        sh '''
+            ls -latr
+            pwd
+            whoami
+            service jenkins status
+        '''
+    }
+    stage('Sleeping'){
+        sh "sleep 60"
+    }
+}
